@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" href="ファイルのURL " type="image/vnd.microsoft.icon" /> 
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>🎀ひめさ界隈🎀公式サイト</title>
+    <style>
+  /* HTML全体に背景画像を設定 */
+        body {
+            background-image: url('dokibunhaikei.png');
+            background-size: cover; /* 画面に合わせて拡大縮小 */
+            background-repeat: no-repeat; /* 繰り返ししない */
+        }
+
+        /* 他の要素にスタイルを設定 */
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 100px;
+            background-color: #ffc0cb; /* 背景に半透明の黒を重ねる */
+        }
+    </style>
+</head>
+<body>
+    <h1>🎀ひめさ界隈🎀メッセージ共有掲示板(Web)</h1>
+         <ul>
+                <li><a href="index.html">ホームページ</a></li>
+                <li><a href="index2.html">管理者、幹部メンバー</a></li>
+                <li><a href="index3.html">メッセージ共有掲示板(Web)</a></li>
+            </ul>
+    <h3>超簡易掲示板作りました。</h3>
+    <h3>必要な時に活用してくださいね。(^^♪</h3>
+    
+    <!-- メッセージ投稿フォーム -->
+    <form id="post-form">
+        <input type="text" id="message" placeholder="メッセージを入力">
+        <button type="button" onclick="postMessage()">投稿</button>
+    </form>
+
+    <!-- メッセージ一覧表示エリア -->
+    <div id="message-list"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase の設定情報
+        var firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        
+        // Firebase 初期化
+        firebase.initializeApp(firebaseConfig);
+
+        // Firestore データベースを使用
+        var db = firebase.firestore();
+
+        // メッセージ投稿関数
+        function postMessage() {
+            var message = document.getElementById("message").value;
+
+            // Firestore にメッセージを追加
+            db.collection("messages").add({
+                text: message,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                document.getElementById("message").value = "";
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
+        }
+
+        // メッセージのリアルタイム表示
+        db.collection("messages").orderBy("timestamp", "desc").onSnapshot(function(snapshot) {
+            var messageList = document.getElementById("message-list");
+            messageList.innerHTML = "";
+
+            snapshot.forEach(function(doc) {
+                var messageData = doc.data();
+                var messageElement = document.createElement("div");
+                messageElement.textContent = messageData.text;
+                messageList.appendChild(messageElement);
+            });
+        });
+    </script>
+        <footer>
+        <p>&copy; 2023 🎀ひめさ界隈🎀公式サイト。 無断転載を禁じます。</p>
+    </footer>
+</body>
+</html>

@@ -1,5 +1,0 @@
-order allow,deny
-allow from all
-deny from .cn
-deny from .ru
-deny from .kp

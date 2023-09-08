@@ -1,0 +1,15 @@
+/* スタイルの定義例 */
+/* HTML全体に背景画像を設定 */
+body {
+            background-image: url('dokibunhaikei.png');
+            background-size: cover; /* 画面に合わせて拡大縮小 */
+            background-repeat: no-repeat; /* 繰り返ししない */
+}
+
+/* 他の要素にスタイルを設定 */
+h1 {
+            color: white;
+            text-align: center;
+            padding: 50px;
+            background-color: #ffc0cb; /* 背景に半透明の黒を重ねる */
+}

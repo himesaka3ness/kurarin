@@ -1,0 +1,14 @@
+/* パソコン用のスタイル */
+@media screen and (min-width: 1024px) {
+  /* スタイルの設定 */
+}
+
+/* タブレット用のスタイル */
+@media screen and (max-width: 1023px) {
+  /* スタイルの設定 */
+}
+
+/* スマートフォン用のスタイル */
+@media screen and (max-width: 767px) {
+  /* スタイルの設定 */
+}

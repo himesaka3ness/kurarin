@@ -1,0 +1,120 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFD5EC;
+}
+
+header {
+    background-color: #D7EEFF;
+    color: #FF5192;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    margin: 20px;
+}
+
+section {
+    background-image: url('PastelColors.jpg');
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #6927FF;
+    color: #5507FF;
+    padding: 10px;
+}
+
+footer {
+    background-color: #D7EEFF;
+    color: #FF5192;
+    text-align: center;
+    padding: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: #0D47A1;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 2px 2px 4px #999;
+  width: 250px;
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+}
+
+.avatar {
+  height: 85px;
+  padding-top: 20px;
+  background: #fff;
+}
+
+.avatar-img {
+  width: 150px;
+  height: 150px;
+  background-image: url('taisaiseikun.jpg');
+  background-color: #fff;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 3px solid #f5f5f5;
+  margin: 0 auto;
+}
+
+.profile {
+  padding-top: 85px;
+}
+
+.me {
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.name {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.role, .company {
+  color: #e3e3e3;
+}
+
+.contact {
+  padding: 20px 0;
+  border-top: 1px solid #f5f5f5;
+  text-align: center;
+}
+
+.contact a,
+.contact a:link,
+.contact a:visited,
+.contact a:hover,
+.contact a:active {
+  color: #fff;
+}

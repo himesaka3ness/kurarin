@@ -1,0 +1,26 @@
+<?php
+session_start();
+$token = bin2hex(random_bytes(32));
+$_SESSION['csrf_token'] = $token;
+?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>問い合わせありがとうございました！</title>
+</head>
+
+<body>
+<table width="100%" cellspacing="0" cellpadding="0" style="border:0px solid blue;" bgcolor="white" align="center">
+    <header>
+        <h1>問い合わせありがとうございました！</h1>
+    </header>
+
+    <footer>
+        <p>&copy; 2023 🎀ひめさ界隈🎀公式サイト</p>
+    </footer>
+</body>
+</html>

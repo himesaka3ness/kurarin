@@ -76,11 +76,6 @@ header {
   float: right;
 }
 
-.header-right a {
-  float: right;
-  color: white;
-}
-
 .header-right a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }

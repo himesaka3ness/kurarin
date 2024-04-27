@@ -95,8 +95,6 @@ header {
   position: fixed; /* または absolute */
   top: 0;
   right: 0;
-  margin-right: 10px; /* 右の余白を調整 */
-  margin-top: 10px;
   /* displayをnoneに指定してください */
   display: none;  
 }

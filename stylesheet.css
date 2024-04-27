@@ -73,10 +73,7 @@ header {
 }
 
 .header-right {
-  font-size: 20px;
   float: right;
-  margin-right: -25px;
-　color: white;
 }
 
 .header-right a:hover {

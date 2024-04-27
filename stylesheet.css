@@ -89,6 +89,7 @@ header {
 
 /* menu-iconのCSSを貼り付けてください */
 .menu-icon {
+  color: white;
   position: fixed; /* または absolute */
   top: 0;
   right: 0;

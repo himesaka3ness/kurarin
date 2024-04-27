@@ -53,4 +53,16 @@
   .top-wrapper p {
     font-size: 14px;
   }
+  .menu-content {
+  display: none;
+}
+
+/* スマホサイズでの表示調整 */
+@media (max-width: 768px) {
+  .menu-content {
+    display: none; /* 初期状態では非表示 */
+  }
+  .menu-icon {
+    display: block; /* アイコンは表示 */
+  }
 }

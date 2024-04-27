@@ -74,6 +74,7 @@ header {
 }
 
 .header-right {
+  font-size: 25px;
   float: right;
   margin-right: -25px;
 　color: white;

@@ -10,24 +10,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   </head>
     <body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="aimonica.png">
-        </div>
-        <!-- ここにスマートフォン用のメニューアイコンを追加してください -->
-        <div class="menu-icon">
-          <span class="fa fa-bars"></span>
-        </div>
-        <div class="header-right">
-          <a href="index.html">ホーム</a>
-          <a href="member.html">幹部メンバー一覧</a>
-          <a href="history.html">🎀ひめさ界隈🎀の歴史</a>
-          <a href="contact.html">お問い合わせフォーム</a>
-          <a href="certification.html">一部メンバー用</a>
-        </div>　
-      </div>
-    </header>
+<header>
+  <div class="container">
+    <div class="header-left">
+      <img class="logo" src="aimonica.png">
+    </div>
+    <!-- スマートフォン用のメニューアイコンにIDを追加 -->
+    <div class="menu-icon" id="menu-icon">
+      <span class="fa fa-bars"></span>
+    </div>
+    <!-- ナビゲーションメニューにIDを追加 -->
+    <div class="header-right" id="menu-content" style="display: none;">
+      <a href="index.html">ホーム</a>
+      <a href="member.html">幹部メンバー一覧</a>
+      <a href="history.html">🎀ひめさ界隈🎀の歴史</a>
+      <a href="contact.html">お問い合わせフォーム</a>
+      <a href="certification.html">一部メンバー用</a>
+    </div>  
+  </div>
+</header>
     <video autoplay muted loop>
       <source src="universe.mp4" type="video/mp4">
     </video>

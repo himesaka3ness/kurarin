@@ -49,4 +49,16 @@
   .top-wrapper p {
     font-size: 14px;
   }
+  /* スマートフォンやタブレットなどの画面幅が768px未満の場合 */
+@media (max-width: 768px) {
+  .header-right {
+    display: none; /* 初期状態では非表示 */
+  }
+}
+
+/* 画面幅が768px以上のデバイスでのスタイル */
+@media (min-width: 768px) {
+  .header-right {
+    display: block !important; /* PC版では常に表示 */
+  }
 }
